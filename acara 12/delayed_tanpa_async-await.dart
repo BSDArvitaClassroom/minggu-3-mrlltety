@@ -1,5 +1,8 @@
+import 'dart:async';
+
 Future delayedPrint(int seconds, String message){
-  final dration = Duration(seconds: seconds);
+  final duration = Duration(seconds: seconds);
+  return Future.delayed(duration).then((value) => message);
 }
 
 void main(List<String> args) {
